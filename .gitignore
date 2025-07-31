@@ -1,24 +1,26 @@
-# dependencies
+# Dependencies
 node_modules/
 
 # WhatsApp Web auth/cache (sensitive session data)
-.wwebjs-auth/
+.wwebjs_auth/
 .wwebjs-cache/
 
 # Google Cloud service account key (sensitive!)
 service-account-key.json
 
-# system files
+# System files
 .DS_Store
 Thumbs.db
 
-# logs
+# Logs
 logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-echo ".wwebjs_auth/" >> .gitignore
+# Lock files
+package-lock.json
 
-.wwebjs_auth/
+# Environment variables
+.env

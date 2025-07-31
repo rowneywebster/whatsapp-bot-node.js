@@ -1,16 +1,17 @@
-// menu.js — menu logic (full updated)
+const products = require("./products");
+const state = require("./state");
+const { MessageMedia } = require("whatsapp-web.js");
 
-const products = require('./products');
-const state = require('./state');
-const { MessageMedia } = require('whatsapp-web.js');
-
-exports.showMainMenu = (client, msg) => {
-  msg.reply(`👋 Welcome to BestCart! Here are our products:
-
-${Object.entries(products).map(([key, p]) => `${key}️⃣ ${p.name} - ${p.price}`).join('\n')}
-5️⃣ 🚚 Delivery Options
-
-Reply with the product number or *menu* anytime.`);
+exports.showWelcomeMenu = (client, msg) => {
+  msg.reply(
+    `👋 Hi! I’m *Joy*, welcome to our store!\n\n🛍️ Here are our products:\n\n${Object.entries(
+      products
+    )
+      .map(([key, p]) => `${key}️⃣ ${p.name} - ${p.price}`)
+      .join(
+        "\n"
+      )}\n5️⃣ 🚚 Delivery Options\n\nReply with the product number or *menu* anytime.`
+  );
 };
 
 exports.handleSelection = async (client, msg, input) => {
@@ -19,28 +20,30 @@ exports.handleSelection = async (client, msg, input) => {
 
   const currentState = state.get(sender);
 
-  // Handle follow-up after product shown
-  if (currentState && currentState.startsWith('PRODUCT_')) {
-    const productKey = currentState.split('_')[1];
+  if (currentState && currentState.startsWith("PRODUCT_")) {
+    const productKey = currentState.split("_")[1];
     const product = products[productKey];
 
-    if (input === '1') {
-      await chat.sendMessage(`🛒 *Order Link for ${product.name}:*\n${product.link || 'https://bestcarteshop.com'}\n\nThank you for shopping with us!`);
+    if (input === "1") {
+      await chat.sendMessage(
+        `🛒 *Order Link for ${product.name}:*\n${product.link}\n\nThank you for shopping with us!`
+      );
       state.clear(sender);
       return;
     }
 
-    if (input === '2') {
-      state.set(sender, 'MENU');
-      return exports.showMainMenu(client, msg);
+    if (input === "2") {
+      state.set(sender, "MENU");
+      return exports.showWelcomeMenu(client, msg);
     }
 
-    await chat.sendMessage(`❌ Invalid option. Reply with *1* to Order Now or *2* to go Back to Menu.`);
+    await chat.sendMessage(
+      ` 🙃 Sorry, no good match found. Reply with *1* to Order Now or *2* to go Back to Menu.`
+    );
     return;
   }
 
-  // Normalize input to just the number
-  const normalizedInput = input.replace(/[^0-9]/g, '');
+  const normalizedInput = input.replace(/[^0-9]/g, "");
 
   if (products[normalizedInput]) {
     const p = products[normalizedInput];
@@ -58,6 +61,8 @@ exports.handleSelection = async (client, msg, input) => {
     await chat.sendMessage(optionsMessage);
     state.set(sender, `PRODUCT_${normalizedInput}`);
   } else {
-    await chat.sendMessage(`❌ Invalid option. Please reply with a product number (1-4) or *menu*.`);
+    await chat.sendMessage(
+      `🙃 Sorry, no good match found. Please reply with a product number (1-4) or *menu*.`
+    );
   }
 };
