@@ -3,7 +3,7 @@ node_modules/
 
 # WhatsApp Web auth/cache (sensitive session data)
 .wwebjs_auth/
-.wwebjs-cache/
+.wwebjs_cache/
 
 # Google Cloud service account key (sensitive!)
 service-account-key.json
