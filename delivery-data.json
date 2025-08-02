@@ -1,225 +1,226 @@
 {
-    "Bungoma": [
-      {
-        "Office": "Bungoma",
-        "Agent": "Victor Kiberas",
-        "Contact": "+254729623763",
-        "Location": "Nathan Plaza next to G4S office, alongside Dominion Institute, Bungoma Town"
-      },
-      {
-        "Office": "Webuye",
-        "Agent": "Henry Chepkuto Makwa",
-        "Contact": "+254110624807",
-        "Location": "Along KMTC Road behind Kenya Power offices"
-      },
-      {
-        "Office": "Nambale",
-        "Agent": "Benah Wanguria",
-        "Contact": "+254712034648",
-        "Location": "Nambale town, next to gulf petrol station"
-      }
-    ],
-    "Uasin Gishu": [
-      {
-        "Office": "Eldoret",
-        "Agent": "Adrian Iluve",
-        "Contact": "+254713188301",
-        "Location": "MEADOWS HSE, OPP SIRIKWA HOTEL, ground flr behind tulin supemarket Iten Road"
-      },
-      {
-        "Office": "Eldoret CBD",
-        "Agent": "Adrian Iluve",
-        "Contact": "+254713188301",
-        "Location": "Eldoret cbd, bargetuny plaza parking slot opp Bank of Africa and cooperative bank"
-      },
-      {
-        "Office": "Mois Bridge",
-        "Agent": "Aron Langat",
-        "Contact": "+254719776372",
-        "Location": "Raha hardware, opposite shell petrol station, along Kitale-Eldoret road"
-      }
-    ],
-    "Kakamega": [
-      {
-        "Office": "Kakamega",
-        "Agent": "Paul Ogutu",
-        "Contact": "+254714736935",
-        "Location": "BBOX Kakamega shop, at Jamia Mosque, along Kakamega-Mumias Road"
-      },
-      {
-        "Office": "Mumias",
-        "Agent": "Washikhole Cassim Ochibah",
-        "Contact": "+254722157117",
-        "Location": "Lumino Rd. Survival Towers. Right behind G4S Mumias town"
-      }
-    ],
-    "Busia": [
-      {
-        "Office": "Busia",
-        "Agent": "Closed",
-        "Contact": "+254712034648",
-        "Location": "Colmac Cyber along Busia-Kisumu road opposite ATC"
-      },
-      {
-        "Office": "Malaba",
-        "Agent": "June Rapha Akinyi",
-        "Contact": "+254111446025",
-        "Location": "Next to Garden park Hotel, Malaba"
-      },
-      {
-        "Office": "Mbale",
-        "Agent": "Irene Akinyi Obonyo",
-        "Contact": "+254720489792",
-        "Location": "Mbale town, along Kakamega-Kisumu highway"
-      },
-      {
-        "Office": "Luanda",
-        "Agent": "Catherine Otieno",
-        "Contact": "+254723714899",
-        "Location": "Luanda town, along Kisumu-Siaya road"
-      }
-    ],
-    "Nairobi": [
-      {
-        "Office": "Kitengela",
-        "Agent": "Amos Manthi",
-        "Contact": "+254721398126",
-        "Location": "Off Kitengela Kajiado road, next to Kitengela Medical Hospital"
-      }
-    ],
-    "Kiambu": [
-      {
-        "Office": "Thika",
-        "Agent": "Branch",
-        "Contact": "+254000000000",
-        "Location": "Along Upper Hill Road, Behind Thika main stage. Opposite Diversity Microcredit"
-      },
-      {
-        "Office": "Kikuyu",
-        "Agent": "Kelvin Migwi Muthoni",
-        "Contact": "+254254708000000",
-        "Location": "Kikuyu town, behind catholic cathedral church"
-      },
-      {
-        "Office": "Kiambu",
-        "Agent": "Kelvin Migwi Muthoni",
-        "Contact": "+254254708000000",
-        "Location": "Kiambu town, Africana building, next to Jumia pick up station, Opp Ola petrol station"
-      },
-      {
-        "Office": "Limuru",
-        "Agent": "Kelvin Migwi Muthoni",
-        "Contact": "+254254708000000",
-        "Location": "At Limuru town, next to Cooperative bank building"
-      }
-    ],
-    "Kajiado": [
-      {
-        "Office": "Kitengela",
-        "Agent": "Amos Manthi",
-        "Contact": "+254721398126",
-        "Location": "Off Kitengela Kajiado road, next to Kitengela Medical Hospital"
-      }
-    ],
-    "Machakos": [
-      {
-        "Office": "Machakos",
-        "Agent": "Haron Maundu",
-        "Contact": "+254713726922",
-        "Location": "Next to Splash car Wash, Opposite Makamithi Agrovet"
-      }
-    ],
-    "Meru": [
-      {
-        "Office": "Meru",
-        "Agent": "Samuel G. Mwangi",
-        "Contact": "+254722898737",
-        "Location": "NJURI NJEKE STREET, GROUNDROCK BUILDING BETWEEN KCB BANK AND BANK OF BARODA"
-      },
-      {
-        "Office": "Nkubu",
-        "Agent": "Fridah Kagendo",
-        "Contact": "+254724099110",
-        "Location": "Nkubu town, Opposite main stage"
-      }
-    ],
-    "Kirinyaga": [
-      {
-        "Office": "Mwea",
-        "Agent": "Roy Mutwiri",
-        "Contact": "+254705470671",
-        "Location": "Family Smartphone Shop, along Meru-Nairobi highway opposite Eastmatt supermarket"
-      },
-      {
-        "Office": "Kerugoya",
-        "Agent": "Mercy Nyaguthii Muriithi",
-        "Contact": "+254725877885",
-        "Location": "Tecno shop, between Fargo and G4S offices"
-      }
-    ],
-    "Nyeri": [
-      {
-        "Office": "Nyeri",
-        "Agent": "Yang",
-        "Contact": "+254720652830",
-        "Location": "Along Nairobi-Nanyuki highway, on the right side of White Rhino hotel, straight to GREEN HILLS Hotel"
-      }
-    ],
-    "Murang'a": [
-      {
-        "Office": "Murang'a",
-        "Agent": "Yang",
-        "Contact": "+254720652830",
-        "Location": "Tecno shop opposite Magunas supermarket"
-      }
-    ],
-    "Embu": [
-      {
-        "Office": "Embu",
-        "Agent": "Yang",
-        "Contact": "+254720652830",
-        "Location": "Lexo Petrol Station, on the left along Nairobi-Meru Highway, First door on the left before the Supermarket"
-      }
-    ],
-    "Kilifi": [
-      {
-        "Office": "Kilifi",
-        "Agent": "Haron Maundu",
-        "Contact": "+254713726922",
-        "Location": "Safaricom Customer Care Center Kilifi, Masterminds Network Connections. Ground Floor"
-      },
-      {
-        "Office": "Watamu",
-        "Agent": "Caleb Mwanza",
-        "Contact": "+254706016151",
-        "Location": "Gede Watamu road, Timboni. Madina electronics shop"
-      },
-      {
-        "Office": "Malindi",
-        "Agent": "Haron Maundu",
-        "Contact": "+254713726922",
-        "Location": "Oasis Malindi Mall"
-      },
-      {
-        "Office": "Mtwapa",
-        "Agent": "Denis Yaa Karisa",
-        "Contact": "+254725749822",
-        "Location": "Along Mombasa-Kilifi Highway, next to Mzuri hardware"
-      }
-    ],
-    "Kwale": [
-      {
-        "Office": "Diani",
-        "Agent": "Haron Maundu",
-        "Contact": "+254713726922",
-        "Location": "Neema shopping center, along Diani Beach, next to Davis and Shirtliff, Diani"
-      },
-      {
-        "Office": "Mariakani",
-        "Agent": "Denis Yaa Karisa",
-        "Contact": "+254725749822",
-        "Location": "Right side of Nairobi-Mombasa Highway, 200 meters before KCB/DT Bank PLC, opposite G4S office"
-      }
-    ]
-  }
-  
+  "Bungoma": [
+    {
+      "Office": "Bungoma",
+      "Agent": "Victor Kiberas",
+      "Contact": "+254729623763",
+      "Location": "Nathan Plaza next to G4S office, alongside Dominion Institute, Bungoma Town"
+    },
+    {
+      "Office": "Webuye",
+      "Agent": "Henry Chepkuto Makwa",
+      "Contact": "+254110624807",
+      "Location": "Along KMTC Road behind Kenya Power offices"
+    },
+    {
+      "Office": "Nambale",
+      "Agent": "Benah Wanguria",
+      "Contact": "+254712034648",
+      "Location": "Nambale town, next to gulf petrol station"
+    }
+  ],
+  "Uasin Gishu": [
+    {
+      "Office": "Eldoret",
+      "Agent": "Adrian Iluve",
+      "Contact": "+254713188301",
+      "Location": "MEADOWS HSE, OPP SIRIKWA HOTEL, ground flr behind tulin supemarket Iten Road"
+    },
+    {
+      "Office": "Eldoret CBD",
+      "Agent": "Adrian Iluve",
+      "Contact": "+254713188301",
+      "Location": "Eldoret cbd, bargetuny plaza parking slot opp Bank of Africa and cooperative bank"
+    },
+    {
+      "Office": "Mois Bridge",
+      "Agent": "Aron Langat",
+      "Contact": "+254719776372",
+      "Location": "Raha hardware, opposite shell petrol station, along Kitale-Eldoret road"
+    }
+  ],
+  "Kakamega": [
+    {
+      "Office": "Kakamega",
+      "Agent": "Paul Ogutu",
+      "Contact": "+254714736935",
+      "Location": "BBOX Kakamega shop, at Jamia Mosque, along Kakamega-Mumias Road"
+    },
+    {
+      "Office": "Mumias",
+      "Agent": "Washikhole Cassim Ochibah",
+      "Contact": "+254722157117",
+      "Location": "Lumino Rd. Survival Towers. Right behind G4S Mumias town"
+    }
+  ],
+  "Busia": [
+    {
+      "Office": "Busia",
+      "Agent": "Closed",
+      "Contact": "+254712034648",
+      "Location": "Colmac Cyber along Busia-Kisumu road opposite ATC"
+    },
+    {
+      "Office": "Malaba",
+      "Agent": "June Rapha Akinyi",
+      "Contact": "+254111446025",
+      "Location": "Next to Garden park Hotel, Malaba"
+    },
+    {
+      "Office": "Mbale",
+      "Agent": "Irene Akinyi Obonyo",
+      "Contact": "+254720489792",
+      "Location": "Mbale town, along Kakamega-Kisumu highway"
+    },
+    {
+      "Office": "Luanda",
+      "Agent": "Catherine Otieno",
+      "Contact": "+254723714899",
+      "Location": "Luanda town, along Kisumu-Siaya road"
+    }
+  ],
+  "Nairobi": [
+    {
+      "Office": "Kitengela",
+      "Agent": "Amos Manthi",
+      "Contact": "+254721398126",
+      "Location": "Off Kitengela Kajiado road, next to Kitengela Medical Hospital"
+    }
+  ],
+  "Kiambu": [
+    {
+      "Office": "Thika",
+      "Agent": "Branch",
+      "Contact": "+254000000000",
+      "Location": "Along Upper Hill Road, Behind Thika main stage. Opposite Diversity Microcredit"
+    },
+    {
+      "Office": "Kikuyu",
+      "Agent": "Kelvin Migwi Muthoni",
+      "Contact": "+254254708000000",
+      "Location": "Kikuyu town, behind catholic cathedral church"
+    },
+    {
+      "Office": "Kiambu",
+      "Agent": "Kelvin Migwi Muthoni",
+      "Contact": "+254254708000000",
+      "Location": "Kiambu town, Africana building, next to Jumia pick up station, Opp Ola petrol station"
+    },
+    {
+      "Office": "Limuru",
+      "Agent": "Kelvin Migwi Muthoni",
+      "Contact": "+254254708000000",
+      "Location": "At Limuru town, next to Cooperative bank building"
+    }
+  ],
+  "Kajiado": [
+    {
+      "Office": "Kitengela",
+      "Agent": "Amos Manthi",
+      "Contact": "+254721398126",
+      "Location": "Off Kitengela Kajiado road, next to Kitengela Medical Hospital"
+    }
+  ],
+  "Machakos": [
+    {
+      "Office": "Machakos",
+      "Agent": "Haron Maundu",
+      "Contact": "+254713726922",
+      "Location": "Next to Splash car Wash, Opposite Makamithi Agrovet"
+    }
+  ],
+  "Meru": [
+    {
+      "Office": "Meru",
+      "Agent": "Samuel G. Mwangi",
+      "Contact": "+254722898737",
+      "Location": "NJURI NJEKE STREET, GROUNDROCK BUILDING BETWEEN KCB BANK AND BANK OF BARODA"
+    },
+    {
+      "Office": "Nkubu",
+      "Agent": "Fridah Kagendo",
+      "Contact": "+254724099110",
+      "Location": "Nkubu town, Opposite main stage"
+    }
+  ],
+  "Kirinyaga": [
+    {
+      "Office": "Mwea",
+      "Agent": "Roy Mutwiri",
+      "Contact": "+254705470671",
+      "Location": "Family Smartphone Shop, along Meru-Nairobi highway opposite Eastmatt supermarket"
+    },
+    {
+      "Office": "Kerugoya",
+      "Agent": "Mercy Nyaguthii Muriithi",
+      "Contact": "+254725877885",
+      "Location": "Tecno shop, between Fargo and G4S offices"
+    }
+  ],
+  "Nyeri": [
+    {
+      "Office": "Nyeri",
+      "Agent": "Yang",
+      "Contact": "+254720652830",
+      "Location": "Along Nairobi-Nanyuki highway, on the right side of White Rhino hotel, straight to GREEN HILLS Hotel"
+    }
+  ],
+  "Murang'a": [
+    {
+      "Office": "Murang'a",
+      "Agent": "Yang",
+      "Contact": "+254720652830",
+      "Location": "Tecno shop opposite Magunas supermarket"
+    }
+  ],
+  "Embu": [
+    {
+      "Office": "Embu",
+      "Agent": "Yang",
+      "Contact": "+254720652830",
+      "Location": "Lexo Petrol Station, on the left along Nairobi-Meru Highway, First door on the left before the Supermarket"
+    }
+  ],
+  "Kilifi": [
+    {
+      "Office": "Kilifi",
+      "Agent": "Haron Maundu",
+      "Contact": "+254713726922",
+      "Location": "Safaricom Customer Care Center Kilifi, Masterminds Network Connections. Ground Floor"
+    },
+    {
+      "Office": "Watamu",
+      "Agent": "Caleb Mwanza",
+      "Contact": "+254706016151",
+      "Location": "Gede Watamu road, Timboni. Madina electronics shop"
+    },
+    {
+      "Office": "Malindi",
+      "Agent": "Haron Maundu",
+      "Contact": "+254713726922",
+      "Location": "Oasis Malindi Mall"
+    },
+    {
+      "Office": "Mtwapa",
+      "Agent": "Denis Yaa Karisa",
+      "Contact": "+254725749822",
+      "Location": "Along Mombasa-Kilifi Highway, next to Mzuri hardware"
+    }
+  ],
+  "Kwale": [
+    {
+      "Office": "Diani",
+      "Agent": "Haron Maundu",
+      "Contact": "+254713726922",
+      "Location": "Neema shopping center, along Diani Beach, next to Davis and Shirtliff, Diani"
+    },
+    {
+      "Office": "Mariakani",
+      "Agent": "Denis Yaa Karisa",
+      "Contact": "+254725749822",
+      "Location": "Right side of Nairobi-Mombasa Highway, 200 meters before KCB/DT Bank PLC, opposite G4S office"
+    }
+  ]
+}
+
+

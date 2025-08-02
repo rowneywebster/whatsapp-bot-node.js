@@ -1,136 +1,53 @@
-const deliveryOffices = require('./delivery-data.json');
-const state = require('./state');
+const fs = require('fs');
+const path = require('path');
 
-// 🔍 Match county function
-function findClosestCounty(input) {
-  input = input.toLowerCase().replace(/['"]/g, '').trim();
-  const counties = Object.keys(deliveryOffices).map(c => c.toLowerCase().replace(/['"]/g, '').trim());
+const dataPath = path.join(__dirname, 'delivery-data.json');
+let deliveryData = {};
 
-  const matchIndex = counties.indexOf(input);
-  if (matchIndex !== -1) return Object.keys(deliveryOffices)[matchIndex];
-
-  const closeMatch = counties.find(c => c.startsWith(input) || c.includes(input));
-  if (closeMatch) {
-    const idx = counties.indexOf(closeMatch);
-    return Object.keys(deliveryOffices)[idx];
+function loadData() {
+  try {
+    const raw = fs.readFileSync(dataPath);
+    deliveryData = JSON.parse(raw);
+    console.log("✅ Delivery data loaded successfully.");
+  } catch (err) {
+    console.error("❌ Failed to load delivery data:", err);
+    deliveryData = {};
   }
-
-  return null;
 }
 
-// ✅ Send pickup points
-async function sendCountyPickupPoints(chat, sender, county) {
-  const offices = deliveryOffices[county];
+// ✅ Initial Load
+loadData();
 
-  if (!offices || offices.length === 0) {
-    state.set(sender, 'MENU');
-    return chat.sendMessage(
-      `❌ *No pickup points found for ${county}*\n\n` +
-      `Type *menu* to go back.`
-    );
-  }
+// ✅ Auto-Reload when file changes
+fs.watchFile(dataPath, { interval: 2000 }, () => {
+  console.log("🔄 Delivery data updated. Reloading...");
+  loadData();
+});
 
-  let response = `📍 *${county.toUpperCase()} PICKUP POINTS*\n\n`;
+exports.getCounties = () => Object.keys(deliveryData);
 
-  offices.forEach((office, index) => {
-    response += `${index + 1}. 🏢 *${office.Office}*\n` +
-                `   👤 Agent: ${office.Agent}\n` +
-                `   📞 Contact: ${office.Contact}\n` +
-                `   🏠 Location: ${office.Location}\n\n`;
+exports.getPickupPoints = (county) => {
+  const countyName = county.trim().toLowerCase();
+  const found = Object.keys(deliveryData).find(
+    c => c.toLowerCase() === countyName
+  );
+  if (!found) return null;
+
+  const points = deliveryData[found];
+  let msg = `📍 ${found.toUpperCase()} PICKUP POINTS\n\n`;
+
+  points.forEach((p, i) => {
+    msg += `${i + 1}. 🏢 ${p.Office}\n`;
+    msg += `   👤 Agent: ${p.Agent}\n`;
+    msg += `   📞 Contact: ${p.Contact}\n`;
+    msg += `   🏠 Location: ${p.Location}\n\n`;
   });
 
-  await chat.sendMessage(response);
-  state.set(sender, 'MENU');
-}
-
-// ✅ Main handler
-exports.handle = async (client, msg, input) => {
-  const chat = await msg.getChat();
-  const sender = msg.from;
-  const userState = state.get(sender) || '';
-  input = input.trim();
-
-  // 1️⃣ Delivery details submission
-  if (userState === 'AWAITING_DELIVERY_DETAILS') {
-    if (input.toLowerCase() === 'cancel') {
-      state.set(sender, 'MENU');
-      return chat.sendMessage(`🚫 Request cancelled. Type *menu* for options.`);
-    }
-
-    state.set(sender, 'MENU');
-    return chat.sendMessage(
-      `✅ *THANK YOU!*\n\n` +
-      `We've received your delivery details.\n` +
-      `Joy will contact you shortly to confirm your order! 📞\n\n` +
-      `_Type *menu* for other options._`
-    );
-  }
-
-  // 2️⃣ Delivery options menu
-  if (input === 'delivery' || input === '5') {
-    state.set(sender, 'DELIVERY_MAIN');
-    return chat.sendMessage(
-      `🚚 *DELIVERY OPTIONS*\n\n` +
-      `1️⃣ *SAME-DAY DELIVERY*\n` +
-      `   📍 Available in Nairobi, Kiambu, Machakos (partial), Kajiado (partial)\n\n` +
-      `2️⃣ *COUNTY PICKUP POINTS*\n` +
-      `   📍 Multiple locations nationwide\n\n` +
-      `💬 Reply with *1* or *2*`
-    );
-  }
-
-  // 3️⃣ Same-day delivery request
-  if (input === '1' && userState === 'DELIVERY_MAIN') {
-    state.set(sender, 'AWAITING_DELIVERY_DETAILS');
-    return chat.sendMessage(
-      `📬 *SAME-DAY DELIVERY REQUEST*\n\n` +
-      `Just send:\n` +
-      `• Your full address\n` +
-      `• Preferred time (e.g. "today 2-4 PM")\n` +
-      `• Your phone number\n` +
-      `• Product name\n\n` +
-      `_Type 'cancel' to stop_`
-    );
-  }
-
-  // 4️⃣ County pickup points
-  if (input === '2' && userState === 'DELIVERY_MAIN') {
-    state.set(sender, 'AWAITING_COUNTY');
-    return chat.sendMessage(
-      `🌍 *COUNTY PICKUP LOCATIONS*\n\n` +
-      `Enter your county name (e.g. Nairobi):\n\n` +
-      `_Type 'cancel' to stop_`
-    );
-  }
-
-  // 5️⃣ Handle county input
-  if (userState === 'AWAITING_COUNTY') {
-    const normalized = input.toLowerCase().replace(/['"]/g, '').trim();
-
-    if (normalized === 'cancel' || normalized === 'menu') {
-      state.set(sender, 'MENU');
-      return chat.sendMessage(`🚫 Request cancelled. Type *menu* for options.`);
-    }
-
-    const matchedCounty = findClosestCounty(normalized);
-    if (!matchedCounty) {
-      return chat.sendMessage(
-        `❌ County not found.\n\n` +
-        `Examples: Nairobi, Bungoma, Uasin Gishu\n\n` +
-        `_Type 'cancel' to stop_`
-      );
-    }
-
-    return sendCountyPickupPoints(chat, sender, matchedCounty);
-  }
-
-  // 6️⃣ Fallback
-  return chat.sendMessage(
-    `⚠️ *Invalid option*\n\n` +
-    `Type *menu* for main options\n` +
-    `Type *help* for assistance`
-  );
+  return msg.trim();
 };
+
+
+
 
 
 
